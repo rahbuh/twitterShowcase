@@ -1,8 +1,8 @@
 /* Global Styles */
 :root {
   --dark-color: #333333;
-  --gray-primary: #808080;
-  --gray-darker: #666666;
+  --color-primary: #1b80e9;
+  --dark-primary: #1570d1;
   --white-font: #f6f6f6;
 }
 
@@ -22,8 +22,8 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: var(--gray-primary);
-  border-bottom: 1px solid var(--gray-darker);
+  background-color: var(--color-primary);
+  border-bottom: 1px solid var(--dark-primary);
   display: flex;
   align-items: center;
   padding: 0.7rem 2rem;
@@ -40,7 +40,7 @@ body {
 }
 
 .navbar li:hover{
-  background-color: var(--gray-darker);
+  background-color: var(--dark-primary);
 }
 
 .navbar a {
