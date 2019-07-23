@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./components/layout/Navbar";
-import Home from "./components/content/Home";
-// import Search from "./components/content/Search";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Search from "./components/Search";
 import "./App.css";
 
 class App extends Component {
@@ -12,15 +12,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Navbar />
-        <main>
-          <div className="container">
-            <Home />
-            {/* <Search /> */}
-          </div>
-        </main>
-      </div>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <main>
+            <Route exact path="/" component={Home} />
+            <Route path="/search" component={Search} />
+          </main>
+        </div>
+      </Router>
     );
   }
 }
