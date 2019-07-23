@@ -5,9 +5,9 @@ const Navbar = () => {
         <nav className={'navbar'}>
             <span className={'title'}>Twitter Showcase</span>
            <ul>
-               <li><a href="">Home</a></li>
-               <li><a href="">Search</a></li>
-               <li><a href="">Favorites</a></li>
+               <li><a href="https://google.com">Home</a></li>
+               <li><a href="https://google.com">Search</a></li>
+               <li><a href="https://google.com">Favorites</a></li>
            </ul>
         </nav>
     )

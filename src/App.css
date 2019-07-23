@@ -24,6 +24,17 @@ body {
   margin: 0 auto;
 }
 
+.btn {
+  display: inline-block;
+  background: var(--dark-primary);
+  color: var(--color-lime);
+  padding: 0.4rem 1.3rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 50%;
+}
+
 .container {
   background-color: rgb(246, 246, 246, 0.8);
   display: flex;
@@ -39,7 +50,28 @@ body {
   padding: 2rem;
 }
 
-/* Navbar */
+.form {
+  width: 80%;
+  text-align: center;
+}
+
+input {
+  margin: 0.5rem 0;
+}
+
+input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"],
+button {
+  font: inherit;
+}
+
 .navbar {
   background-color: var(--color-primary);
   border-bottom: 1px solid var(--dark-primary);
@@ -93,7 +125,19 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 700px) {
-  /* Navbar */
+  .btn {
+    width: 100%;
+  }
+
+  .container {
+    margin: 0;
+    padding: 0.75rem;
+  }
+
+  .form {
+    width: 100%;
+  }
+
   .navbar {
     display: block;
     text-align: center;
