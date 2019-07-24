@@ -101,6 +101,11 @@ button {
   margin: 0 0.25rem;
 }
 
+.navbar a:active,
+.navbar a:focus {
+  outline: none;
+}
+
 .navbar a,
 .title {
   color: var(--color-lime);
