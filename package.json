@@ -4,14 +4,15 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rahbuh/twitterShowcase.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rob Kramer",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rahbuh/twitterShowcase/issues"
@@ -20,5 +21,8 @@
   "dependencies": {
     "concurrently": "^4.1.1",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
