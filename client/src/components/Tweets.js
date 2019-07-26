@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Tweets.css";
 
 class Tweets extends Component {
   constructor() {
@@ -16,11 +17,11 @@ class Tweets extends Component {
 
   render() {
     return (
-      <div>
+      <div className='tweet-list'>
         <h1>Tweets</h1>
         <ul>
           {this.state.tweets.map(tweet => 
-            <li key={tweet.id}>{tweet.tweet}</li>
+            <li className='tweet' key={tweet.id}>{tweet.tweet}</li>
           )}
         </ul>
       </div>

@@ -3,8 +3,8 @@
   --dark-color: #333333;
   --color-primary: #1b80e9;
   --dark-primary: #1570d1;
-  --off-white: #f6f6f6;
-  --color-lime: #ccffcc;
+  --border-white: #e6e6e6;
+  --color-lime: #ffff80;
   --shadow: #999999;
 }
 
@@ -36,41 +36,21 @@ body {
 }
 
 .container {
-  background-color: rgb(246, 246, 246, 0.8);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.content {
   margin: 1rem;
   padding: 1rem;
 }
 
-.content {
-  background-color: var(--off-white);
+.white-background {
+  background-color: rgb(246, 246, 246, 0.8);
+  border: 1px solid var(--border-white);;
   margin: 1rem;
-  padding: 2rem;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-}
-
-input {
-  margin: 0.5rem 0;
-}
-
-input[type="text"] {
-  width: 400px;
-  border: 1px solid #ccc;
-  font-size: 1.2rem;
-  padding: 0.4rem;
-}
-
-input[type="submit"],
-button {
-  font: inherit;
+  padding: 1rem;
 }
 
 .navbar {
@@ -141,13 +121,9 @@ button {
     padding: 0.75rem;
   }
 
-  .form {
-    width: 100%;
-  }
-
-  input[type="text"] {
-    width: 100%;
-    font-size: 1rem;
+  .content {
+    margin: 0 .5rem 1.5rem;
+    padding: 0;
   }
 
   .navbar {
