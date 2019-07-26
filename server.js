@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-import axios from "axios";
 
 app.get("/api/tweets", (req, res) => {
   const tweets = [
