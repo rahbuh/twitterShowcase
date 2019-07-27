@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "./Tweets.css";
 
 class Tweets extends Component {
@@ -11,20 +10,7 @@ class Tweets extends Component {
   }
 
   componentDidMount() {
-    const USER_TOKEN =
-      "AAAAAAAAAAAAAAAAAAAAAM5O%2FQAAAAAA4PUqURKvlaYZE123WLpGFsLFIuo%3D8Zee34fRfseVOhCH53BbhlcpPd4jzmXL9Xy34o2dBDngAfmkfu";
-    const URL =
-      "https://api.twitter.com/1.1/search/tweets.json?q=nasa&result_type=popular&count=1";
 
-    const AuthStr = "Bearer ".concat(USER_TOKEN);
-    axios
-      .get(URL, { headers: { Authorization: AuthStr } })
-      .then(response => {
-        console.log(response.data);
-      })
-      .catch(error => {
-        console.log("error " + error);
-      });
   }
 
   render() {

@@ -1,3 +1,5 @@
+require("dotenv").config();
+const axios = require("axios");
 const express = require("express");
 const app = express();
 
@@ -10,8 +12,26 @@ app.get("/api/tweets", (req, res) => {
   res.json(tweets);
 });
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
-app.listen(port, () => {
-  console.log(`listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`listening on port ${PORT}`);
+  apiCall();
 });
+
+const apiCall = () => {
+  //   console.log(process.env.TWITTER_TOKEN);
+  const USER_TOKEN = process.env.TWITTER_TOKEN;
+  const URL =
+    "https://api.twitter.com/1.1/search/tweets.json?q=nasa&result_type=popular&count=1";
+
+  const AuthStr = "Bearer ".concat(USER_TOKEN);
+  axios
+    .get(URL, { headers: { Authorization: AuthStr } })
+    .then(response => {
+      console.log(response.data);
+    })
+    .catch(error => {
+      console.log("error " + error);
+    });
+};
