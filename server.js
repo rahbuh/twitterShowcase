@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 
 app.get("/api/tweets", (req, res) => {
+  // Data to test express-react connection
   const tweets = [
     { id: 1, tweet: "This is one tweet" },
     { id: 2, tweet: "This is two tweet" },
