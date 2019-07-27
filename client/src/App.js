@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Search from "./components/Search";
-import Random from "./components/Random";
+import SearchTweets from "./components/SearchTweets";
+import RandomTweets from "./components/RandomTweets";
 import "./App.css";
 
 const App = () => {
@@ -13,28 +13,12 @@ const App = () => {
         <Navbar />
         <main>
           <Route exact path="/" component={Home} />
-          <Route path="/search" component={Search} />
-          <Route path="/random" component={Random} />
+          <Route path="/search" component={SearchTweets} />
+          <Route path="/random" component={RandomTweets} />
         </main>
       </div>
     </Router>
   );
 };
-// class App extends Component {
-//   render() {
-//     return (
-//       <Router>
-//         <div className="App">
-//           <Navbar />
-//           <main>
-//             <Route exact path="/" component={Home} />
-//             <Route path="/search" component={Search} />
-//             <Route path="/random" component={Random} />
-//           </main>
-//         </div>
-//       </Router>
-//     );
-//   }
-// }
 
 export default App;
