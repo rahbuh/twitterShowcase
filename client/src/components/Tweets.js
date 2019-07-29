@@ -10,7 +10,6 @@ class Tweets extends Component {
   }
 
   componentDidMount() {
-
   }
 
   render() {

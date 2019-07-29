@@ -1,16 +1,33 @@
 import React, { Component, Fragment } from "react";
+const axios = require("axios");
 
 class Search extends Component {
   state = {
-    searchText: ""
+    searchText: "",
+    tweets: []
   };
 
   onChange = e => this.setState({ searchText: e.target.value });
 
   onSubmit = e => {
     e.preventDefault();
-    console.log(this.state.searchText);
-    this.setState({ searchText: '' });
+    this.search(this.state.searchText);
+    this.setState({ searchText: "" });
+  };
+
+  search = text => {
+    const url = "/api/search/" + text;
+
+    async function testAPI() {
+      let res = await axios.get(url)
+       
+      let data = res.data;
+      console.log('Response: ' + data);
+      this.setState({ tweets: data });
+    }
+
+    testAPI();
+    console.log(this.state.tweets)
   };
 
   render() {
