@@ -1,16 +1,14 @@
 require("dotenv").config();
 const express = require("express");
+const searchTwitter = require("./api/Search");
+
 const app = express();
 
 app.get("/api/search/:text", (req, res) => {
-  const tweets = [
-    { id: 1, tweet: "This is one tweet" },
-    { id: 2, tweet: "This is two tweet" },
-    { id: 3, tweet: "This is three tweet" }
-  ];
-  // console.log(req.params.text);
-
-  res.send(tweets);
+  const searchText = req.params.text;
+  searchTwitter(searchText).then(data => {
+    res.json({ message: "Request received!", data });
+  });
 });
 
 const PORT = process.env.PORT || 5000;
