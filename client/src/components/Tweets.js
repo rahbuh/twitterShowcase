@@ -1,23 +1,20 @@
-import React, { Component } from "react";
-import "./Tweets.css";
+import React from "react";
 
-class Tweets extends Component {
-
-
-  render() {
-    return (
-      <div className="tweet-list">
-        <h1>Tweets</h1>
-        {/* <ul>
-          {this.state.tweets.map(tweet => (
-            <li className="tweet" key={tweet.id}>
-              {tweet.tweet}
-            </li>
-          ))}
-        </ul> */}
+const Tweets = ({ tweet }) => {
+  return (
+    <li className="tweet">
+      <div className="tweet-meta">
+        <img src={tweet.user.profile_image_url} alt="User profile" />
+        <div className="tweet-meta-text">
+          <div>
+            <strong>{tweet.user.name}</strong>&nbsp;@{tweet.user.screen_name}&nbsp;
+          </div>
+          <div>-&nbsp;{tweet.user.created_at}</div>
+        </div>
       </div>
-    );
-  }
-}
+      <div className="tweet-text">{tweet.text}</div>
+    </li>
+  );
+};
 
 export default Tweets;

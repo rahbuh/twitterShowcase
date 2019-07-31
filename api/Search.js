@@ -1,9 +1,9 @@
 require("dotenv").config();
 const axios = require("axios");
 
-const searchTwitter = searchText => {
+const searchTopic = searchText => {
   const count = 10;
-  const type = "popular";
+  const type = "recent";
   const lang = "en";
   let query = searchText;
 
@@ -24,4 +24,4 @@ const searchTwitter = searchText => {
     });
 };
 
-module.exports = searchTwitter;
+module.exports = searchTopic;

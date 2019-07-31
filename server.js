@@ -1,12 +1,12 @@
 require("dotenv").config();
 const express = require("express");
-const searchTwitter = require("./api/Search");
+const searchTopic = require("./api/Search");
 
 const app = express();
 
 app.get("/api/search/:text", (req, res) => {
   const searchText = req.params.text;
-  searchTwitter(searchText).then(data => {
+  searchTopic(searchText).then(data => {
     res.json({ message: "Request received!", data });
   });
 });

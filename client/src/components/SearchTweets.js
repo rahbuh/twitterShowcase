@@ -11,10 +11,16 @@ class SearchTweets extends Component {
 
   onChange = e => this.setState({ searchText: e.target.value });
 
-  onSubmit = e => {
+  onClickTopic = e => {
     e.preventDefault();
     this.search(this.state.searchText);
     this.setState({ searchText: "" });
+  };
+
+  onClickUser = e => {
+    e.preventDefault();
+    // this.search(this.state.searchText);
+    // this.setState({ searchText: "" });
   };
 
   search = text => {
@@ -32,7 +38,7 @@ class SearchTweets extends Component {
   render() {
     return (
       <div className="search white-background">
-        <form onSubmit={this.onSubmit} className="form">
+        <form className="form">
           <input
             type="text"
             name="searchText"
@@ -40,9 +46,26 @@ class SearchTweets extends Component {
             value={this.state.searchText}
             onChange={this.onChange}
           />
-          <input type="submit" value="Search by Topic" className="btn" />
+          <input
+            onClick={this.onClickTopic}
+            type="submit"
+            value="Search by Topic"
+            className="btn btn-left"
+          />
+          <input
+            onClick={this.onClickUser}
+            type="submit"
+            value="Search by User Handle"
+            className="btn btn-right"
+          />
         </form>
-        <Tweets />
+        <div className="tweet-list">
+          <ul>
+            {this.state.tweets.map(tweet => (
+              <Tweets key={tweet.id} tweet={tweet} />
+            ))}
+          </ul>
+        </div>
       </div>
     );
   }
