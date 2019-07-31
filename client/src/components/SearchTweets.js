@@ -19,7 +19,6 @@ class SearchTweets extends Component {
 
   onClickHandle = e => {
     e.preventDefault();
-    console.log('Clicked')
     this.handleSearch(this.state.searchText);
     this.setState({ searchText: "" });
   };
