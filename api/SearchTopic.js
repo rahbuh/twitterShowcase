@@ -1,11 +1,11 @@
 require("dotenv").config();
 const axios = require("axios");
 
-const searchTopic = searchText => {
+const searchTopic = text => {
   const count = 10;
   const type = "recent";
   const lang = "en";
-  let query = searchText;
+  let query = text;
 
   const USER_TOKEN = process.env.TWITTER_TOKEN;
   const baseURL = "https://api.twitter.com/1.1/search/tweets.json";

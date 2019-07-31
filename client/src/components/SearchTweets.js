@@ -13,27 +13,37 @@ class SearchTweets extends Component {
 
   onClickTopic = e => {
     e.preventDefault();
-    this.search(this.state.searchText);
+    this.topicSearch(this.state.searchText);
     this.setState({ searchText: "" });
   };
 
-  onClickUser = e => {
+  onClickHandle = e => {
     e.preventDefault();
-    // this.search(this.state.searchText);
-    // this.setState({ searchText: "" });
+    console.log('Clicked')
+    this.handleSearch(this.state.searchText);
+    this.setState({ searchText: "" });
   };
 
-  search = text => {
-    const url = "/api/search/" + text;
-    axios
-      .get(url)
-      .then(response => {
-        this.setState({ tweets: response.data.data });
-      })
-      .catch(error => {
-        console.log("error " + error);
-      });
+  topicSearch = text => {
+    const url = "/api/topic/" + text;
+    this.api(url);
   };
+
+  handleSearch = text => {
+    const url = "/api/handle/" + text;
+    this.api(url);
+  };
+
+  api = url => {
+    axios
+    .get(url)
+    .then(response => {
+      this.setState({ tweets: response.data.data });
+    })
+    .catch(error => {
+      console.log("error " + error);
+    });
+  }
 
   render() {
     return (
@@ -53,7 +63,7 @@ class SearchTweets extends Component {
             className="btn btn-left"
           />
           <input
-            onClick={this.onClickUser}
+            onClick={this.onClickHandle}
             type="submit"
             value="Search by User Handle"
             className="btn btn-right"

@@ -1,12 +1,20 @@
 require("dotenv").config();
 const express = require("express");
-const searchTopic = require("./api/Search");
+const searchTopic = require("./api/SearchTopic");
+const searchHandle = require("./api/SearchHandle");
 
 const app = express();
 
-app.get("/api/search/:text", (req, res) => {
-  const searchText = req.params.text;
-  searchTopic(searchText).then(data => {
+app.get("/api/topic/:text", (req, res) => {
+  const text = req.params.text;
+  searchTopic(text).then(data => {
+    res.json({ message: "Request received!", data });
+  });
+});
+
+app.get("/api/handle/:text", (req, res) => {
+  const text = req.params.text;
+  searchHandle(text).then(data => {
     res.json({ message: "Request received!", data });
   });
 });
