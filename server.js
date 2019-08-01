@@ -14,7 +14,14 @@ app.get("/api/topic/:text", (req, res) => {
 
 app.get("/api/handle/:text", (req, res) => {
   const text = req.params.text;
-  searchHandle(text).then(data => {
+  searchHandle(text, 10).then(data => {
+    res.json({ message: "Request received!", data });
+  });
+});
+
+app.get("/api/random/:text", (req, res) => {
+  const text = req.params.text;
+  searchHandle(text, 100).then(data => {
     res.json({ message: "Request received!", data });
   });
 });

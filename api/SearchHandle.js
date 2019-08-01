@@ -1,8 +1,8 @@
 require("dotenv").config();
 const axios = require("axios");
 
-const searchHandle = text => {
-  const count = 10;
+const searchHandle = (text, tweetCount)=> {
+  const count = tweetCount;
   let screen_name = text;
 
   const USER_TOKEN = process.env.TWITTER_TOKEN;
@@ -15,7 +15,6 @@ const searchHandle = text => {
   return axios
     .get(URL, { headers: { Authorization: AuthStr } })
     .then(response => {
-      console.log(response.data)
       return response.data;
     })
     .catch(error => {

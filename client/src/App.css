@@ -31,6 +31,7 @@ body {
 }
 
 .content {
+  font-size: 1.25rem;
   margin: 1rem;
   padding: 1rem;
 }
@@ -108,8 +109,15 @@ body {
   }
 
   .content {
+    font-size: .8rem;
     margin: 0 0.5rem 1.5rem;
     padding: 0;
+  }
+
+  .content h1 {
+    text-align: center;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
   }
 
   .navbar {

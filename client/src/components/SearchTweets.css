@@ -21,6 +21,7 @@
 
 .btn {
   background: var(--dark-primary);
+  border-radius: 5px;
   color: var(--yellow);
   padding: 0.4rem 1rem;
   border: none;
@@ -53,6 +54,7 @@ button {
 
 .tweet-list {
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0.5rem;
 }
@@ -86,6 +88,10 @@ button {
   padding: 0.5rem 0;
 }
 
+.counts {
+  margin-left: 2rem;
+}
+
 /* Mobile Styles */
 @media (max-width: 700px) {
   .btn {
@@ -110,5 +116,10 @@ button {
   .tweet {
     margin: 0 0 0.5rem;
     padding: 0.5rem;
+  }
+
+  .counts {
+    margin-left: 0;
+    text-align: center;
   }
 }
