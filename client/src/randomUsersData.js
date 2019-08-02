@@ -1,10 +1,10 @@
 const favorites = [
   {
     user: {
-      id: 50393960,
-      name: "Bill Gates",
-      screen_name: "BillGates",
-      profile_image_url_https: "https://pbs.twimg.com/profile_images/988775660163252226/XpgonN0X_normal.jpg"
+      id: 491821358,
+      name: "Emma Wedekind 🐞",
+      screen_name: "EmmaWedekind",
+      profile_image_url_https: "https://pbs.twimg.com/profile_images/1152982158480465920/gWCqWwAA_normal.jpg"
     }
   },
   {
@@ -17,10 +17,10 @@ const favorites = [
   },
   {
     user: {
-      id: 19725644,
-      name: "Neil deGrasse Tyson",
-      screen_name: "neiltyson",
-      profile_image_url_https: "https://pbs.twimg.com/profile_images/74188698/NeilTysonOriginsA-Crop_normal.jpg"
+      id: 793830,
+      name: "Chris Coyier",
+      screen_name: "chriscoyier",
+      profile_image_url_https: "https://pbs.twimg.com/profile_images/883049860332609537/IsUISvAq_normal.jpg"
     }
   },
   {
