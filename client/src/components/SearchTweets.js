@@ -35,14 +35,14 @@ class SearchTweets extends Component {
 
   api = url => {
     axios
-    .get(url)
-    .then(response => {
-      this.setState({ tweets: response.data.data });
-    })
-    .catch(error => {
-      console.log("error " + error);
-    });
-  }
+      .get(url)
+      .then(response => {
+        this.setState({ tweets: response.data.data });
+      })
+      .catch(error => {
+        console.log("error " + error);
+      });
+  };
 
   render() {
     return (
