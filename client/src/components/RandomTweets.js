@@ -12,6 +12,8 @@ class RandomTweets extends Component {
   };
 
   render() {
+    const favorites = this.state.users;
+
     return (
       <div className="container white-background">
         <p>
@@ -19,8 +21,8 @@ class RandomTweets extends Component {
           random tweet from their account.
         </p>
         <div className="favorite-list">
-          {this.state.users.map(user => (
-            <RandomUsers key={user.id} favorite={user} />
+          {favorites.map(favorite => (
+            <RandomUsers key={favorite.user.id} favorite={favorite} />
           ))}
         </div>
       </div>
