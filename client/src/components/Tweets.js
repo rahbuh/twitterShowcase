@@ -5,7 +5,7 @@ const Tweets = ({ tweet }) => {
   return (
     <li className="tweet">
       <div className="tweet-meta">
-        <img src={tweet.user.profile_image_url} alt="User profile" />
+        <img src={tweet.user.profile_image_url_https} alt="User profile" />
         <div className="tweet-meta-text">
           <div>
             <strong>{tweet.user.name}</strong>&nbsp;@{tweet.user.screen_name}
