@@ -9,7 +9,7 @@ class RandomTweets extends Component {
   state = {
     users: favorites,
     tweets: [],
-    random: []
+    tweet: {}
   };
 
   getUserTweets = screenName => {
@@ -31,7 +31,13 @@ class RandomTweets extends Component {
 
   selectTweet = () => {
     const randomIndex = Math.floor(Math.random() * 100);
-    this.setState({ random: [this.state.tweets[randomIndex]] });
+    this.setState({ tweet: this.state.tweets[randomIndex] });
+  };
+
+  testFunction = () => {
+    if (!this.state.isLoading) {
+      return <Tweets key={this.state.tweet.id} tweet={this.state.tweet} />;
+    }
   };
 
   render() {
@@ -56,9 +62,7 @@ class RandomTweets extends Component {
         </div>
         <div className="tweet-list">
           <ul>
-            {this.state.random.map(tweet => (
-              <Tweets key={tweet.id} tweet={tweet} />
-            ))}
+            <Tweets key={this.state.tweet.id} tweet={this.state.tweet} />
           </ul>
         </div>
       </div>

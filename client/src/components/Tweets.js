@@ -2,6 +2,10 @@ import React from "react";
 import Octicon, { Heart, Sync } from "@primer/octicons-react";
 
 const Tweets = ({ tweet }) => {
+  if (!Object.keys(tweet).length) {
+    return <div></div>
+  }
+  
   const {created_at, text, retweet_count, favorite_count } = tweet;
   const {name, screen_name, profile_image_url_https } = tweet.user
 
