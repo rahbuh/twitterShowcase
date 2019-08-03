@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-// import Tweets from "./Tweets";
+import Tweets from "./Tweets";
 import RandomUsers from "./RandomUsers";
 import favorites from "../randomUsersData";
 import "./RandomTweets.css";
@@ -9,7 +9,7 @@ class RandomTweets extends Component {
   state = {
     users: favorites,
     tweets: [],
-    random: {}
+    random: []
   };
 
   getUserTweets = screenName => {
@@ -23,7 +23,6 @@ class RandomTweets extends Component {
       .then(response => {
         this.setState({ tweets: response.data.data });
         this.selectTweet();
-        this.setState({ tweets: [] });
       })
       .catch(error => {
         console.log("error " + error);
@@ -32,8 +31,7 @@ class RandomTweets extends Component {
 
   selectTweet = () => {
     const randomIndex = Math.floor(Math.random() * 100);
-    this.setState({ random: this.state.tweets[randomIndex] });
-    console.log(this.state.random.user.name);
+    this.setState({ random: [this.state.tweets[randomIndex]] });
   };
 
   render() {
@@ -57,7 +55,11 @@ class RandomTweets extends Component {
           ))}
         </div>
         <div className="tweet-list">
-          {/* <Tweets key={this.state.random.id} tweet={this.state.random} /> */}
+          <ul>
+            {this.state.random.map(tweet => (
+              <Tweets key={tweet.id} tweet={tweet} />
+            ))}
+          </ul>
         </div>
       </div>
     );

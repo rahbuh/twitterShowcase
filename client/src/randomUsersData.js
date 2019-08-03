@@ -19,11 +19,11 @@ const favorites = [
   },
   {
     user: {
-      id: 37710752,
-      name: "Bill Nye",
-      screen_name: "BillNye",
+      id: 1276636970,
+      name: "Evan Bacon 🥓",
+      screen_name: "Baconbrix",
       profile_image_url_https:
-        "https://pbs.twimg.com/profile_images/606232291438829568/8liw3txV_normal.jpg"
+      "https://pbs.twimg.com/profile_images/1052466125055746048/kMLDBsaD_normal.jpg"
     }
   },
   {
