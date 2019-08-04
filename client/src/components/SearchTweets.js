@@ -4,10 +4,13 @@ import Tweets from "./Tweets";
 import "./css/SearchTweets.css";
 
 class SearchTweets extends Component {
-  state = {
-    searchText: "",
-    tweets: []
-  };
+  constructor() {
+    super();
+    this.state = {
+      searchText: "",
+      tweets: []
+    };
+  }
 
   onChange = e => this.setState({ searchText: e.target.value });
 
@@ -44,7 +47,7 @@ class SearchTweets extends Component {
         this.setState({ tweets: response.data.data });
       })
       .catch(error => {
-        console.log("Error msg: " + error);
+        console.log("Returned Error: " + error);
       });
   };
 
@@ -74,9 +77,7 @@ class SearchTweets extends Component {
         </form>
         <div className="tweet-list">
           <ul>
-            {this.state.tweets.map(tweet => (
-              <Tweets key={tweet.id} tweet={tweet} />
-            ))}
+            {this.state.tweets ? this.state.tweets.map(tweet => (<Tweets key={tweet.id} tweet={tweet} />)) : null}
           </ul>
         </div>
       </div>

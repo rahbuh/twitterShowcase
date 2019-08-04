@@ -3,7 +3,7 @@ import Octicon, { Heart, Sync } from "@primer/octicons-react";
 
 const Tweets = ({ tweet }) => {
   if (!Object.keys(tweet).length) {
-    return null
+    return null;
   }
   
   const {created_at, text, retweet_count, favorite_count } = tweet;

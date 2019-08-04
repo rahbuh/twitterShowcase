@@ -6,11 +6,14 @@ import favorites from "../randomUsersData";
 import "./css/RandomTweets.css";
 
 class RandomTweets extends Component {
-  state = {
-    users: favorites,
-    tweets: [],
-    tweet: {}
-  };
+  constructor() {
+    super();
+    this.state = {
+      users: favorites,
+      tweets: [],
+      tweet: {}
+    };
+  }
 
   getUserTweets = screenName => {
     const url = "/api/random/" + screenName;
@@ -25,7 +28,7 @@ class RandomTweets extends Component {
         this.selectTweet();
       })
       .catch(error => {
-        console.log("Error msg: " + error);
+        console.log("Returned Error: " + error);
       });
   };
 
