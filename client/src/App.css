@@ -37,6 +37,10 @@ body {
   padding: 1rem;
 }
 
+.content h1 {
+  color: var(--dark-primary);
+}
+
 .white-background {
   background-color: rgb(246, 246, 246, 0.8);
   border: 1px solid var(--border-white);
@@ -111,12 +115,12 @@ body {
 
   .content {
     font-size: .8rem;
+    text-align: center;
     margin: 0 0.5rem 1.5rem;
     padding: 0;
   }
 
   .content h1 {
-    text-align: center;
     line-height: 1.8rem;
     margin-bottom: 1rem;
   }

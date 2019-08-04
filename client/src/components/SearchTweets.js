@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Tweets from "./Tweets";
-import "./SearchTweets.css";
+import "./css/SearchTweets.css";
 
 class SearchTweets extends Component {
   state = {

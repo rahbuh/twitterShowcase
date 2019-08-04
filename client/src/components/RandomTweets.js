@@ -3,7 +3,7 @@ import axios from "axios";
 import Tweets from "./Tweets";
 import RandomUsers from "./RandomUsers";
 import favorites from "../randomUsersData";
-import "./RandomTweets.css";
+import "./css/RandomTweets.css";
 
 class RandomTweets extends Component {
   state = {
