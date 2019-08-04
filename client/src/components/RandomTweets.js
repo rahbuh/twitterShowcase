@@ -25,7 +25,7 @@ class RandomTweets extends Component {
         this.selectTweet();
       })
       .catch(error => {
-        console.log("error " + error);
+        console.log("Error msg: " + error);
       });
   };
 

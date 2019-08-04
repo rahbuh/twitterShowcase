@@ -13,14 +13,18 @@ class SearchTweets extends Component {
 
   onClickTopic = e => {
     e.preventDefault();
-    this.topicSearch(this.state.searchText);
-    this.setState({ searchText: "" });
+    if (this.state.searchText) {
+      this.topicSearch(this.state.searchText);
+      this.setState({ searchText: "" });
+    }
   };
 
   onClickHandle = e => {
     e.preventDefault();
-    this.handleSearch(this.state.searchText);
-    this.setState({ searchText: "" });
+    if (this.state.searchText) {
+      this.handleSearch(this.state.searchText);
+      this.setState({ searchText: "" });
+    }
   };
 
   topicSearch = text => {
@@ -40,7 +44,7 @@ class SearchTweets extends Component {
         this.setState({ tweets: response.data.data });
       })
       .catch(error => {
-        console.log("error " + error);
+        console.log("Error msg: " + error);
       });
   };
 
