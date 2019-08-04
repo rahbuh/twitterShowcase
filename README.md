@@ -11,8 +11,8 @@ Twitter Showcase is a single page application (SPA) that allows the user to sear
 
 <img src="./readme-images/react.svg" width="50">&nbsp;&nbsp;
 <img src="./readme-images/javascript.svg" width="50">&nbsp;&nbsp;
-<img src="./readme-images/node.png" width="50">&nbsp;&nbsp;
+<img src="./readme-images/node.png" width="60">&nbsp;&nbsp;
 <img src="./readme-images/html-5.svg" width="50">&nbsp;&nbsp;
 <img src="./readme-images/css-3.svg" width="50">&nbsp;&nbsp;
 <img src="./readme-images/postman.svg" width="50">&nbsp;&nbsp;
-<img src="./readme-images/heroku.svg" width="50">
+<img src="./readme-images/heroku.svg" width="40">
