@@ -22,3 +22,13 @@ Twitter Showcase is a single page application (SPA) that allows the user to sear
 - To install and run Twitter Showcase locally, you will need to sign up for a [Twitter developer account](https://developer.twitter.com) and obtain a [bearer token](https://developer.twitter.com/en/docs/basics/authentication/guides/bearer-tokens).
 - Once a bearer token is acquired, create a .env file in the root directory of twitter-showcase.
 - Add the line: TWITTER_TOKEN="`<bearer token>`" (replacing `<bearer token>` with the your own.)
+
+## Technical
+- Front End (JavaScript)
+  - React (main SPA)
+  - Axios (HTTP requests)
+- Back End (Node)
+  - Express (Serving static site, internal API endpoints)
+  - Axios (HTTP requests)
+- Hosts
+  - Heroku
