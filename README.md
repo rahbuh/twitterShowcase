@@ -41,7 +41,8 @@ You need to have node/npm installed on your machine to run the app locally. To i
 - From the root directory, run: `npm install`
 - Install the devDependencies: `npm i -D nodemon concurrently`
 - cd into /client and run: `npm install`
-
+- once installed, to start the application, run: `npm run dev`
+ 
 ### Resources Used
 - <a href="https://www.udemy.com/modern-react-front-to-back/" target="_blank">Udemy - React Front To Back 2019 by  Brad Traversy</a>
 - <a href="https://scrimba.com/g/glearnreact" target="_blank">Scrimba - Learn React for free</a>
