@@ -17,12 +17,6 @@ Twitter Showcase is a single page application (SPA) that allows the user to sear
 <img src="./readme-images/postman.svg" width="50">&nbsp;&nbsp;
 <img src="./readme-images/heroku.svg" width="40">
 
-### Prerequisites
-
-- To install and run Twitter Showcase locally, you will need to sign up for a [Twitter developer account](https://developer.twitter.com) and obtain a [bearer token](https://developer.twitter.com/en/docs/basics/authentication/guides/bearer-tokens).
-- Once a bearer token is acquired, create a .env file in the root directory of twitter-showcase.
-- Add the line: TWITTER_TOKEN="`<bearer token>`" (replacing `<bearer token>` with the your own.)
-
 ### Technical
 - Front End (JavaScript)
   - React (main SPA)
@@ -32,6 +26,12 @@ Twitter Showcase is a single page application (SPA) that allows the user to sear
   - Axios (HTTP requests)
 - Hosts
   - Heroku
+
+### Prerequisites
+
+- To install and run Twitter Showcase locally, you will need to sign up for a [Twitter developer account](https://developer.twitter.com) and obtain a [bearer token](https://developer.twitter.com/en/docs/basics/authentication/guides/bearer-tokens).
+- Once a bearer token is acquired, create a .env file in the root directory of twitter-showcase.
+- Add the line: TWITTER_TOKEN="`<bearer token>`" (replacing `<bearer token>` with the your own.)
 
 ### Resources Used
 - <a href="https://www.udemy.com/modern-react-front-to-back/" target="_blank">Udemy - React Front To Back 2019 by  Brad Traversy</a>
