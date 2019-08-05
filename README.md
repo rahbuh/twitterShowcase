@@ -29,20 +29,17 @@ Twitter Showcase is a single page application (SPA) that allows the user to sear
 
 ### Prerequisites
 
-- To install and run Twitter Showcase locally, you will need to sign up for a [Twitter developer account](https://developer.twitter.com) and obtain a [bearer token](https://developer.twitter.com/en/docs/basics/authentication/guides/bearer-tokens).
-- Once a bearer token is acquired, create a .env file in the root directory of twitter-showcase.
-- Add the line: TWITTER_TOKEN="`<bearer token>`" (replacing `<bearer token>` with the your own.)
+- To run Twitter Showcase, you need to sign up for a [Twitter developer account](https://developer.twitter.com) and obtain a [bearer token](https://developer.twitter.com/en/docs/basics/authentication/guides/bearer-tokens) in order to communicate with the Twitter API.
+- Once a bearer token is acquired, create an .env file in the root directory of twitter-showcase.
+- In the .env file, add the line: TWITTER_TOKEN="`<bearer token>`" (replacing `<bearer token>` with the your own.)
 
 You need to have node/npm installed on your machine to run the app locally. To install node, go to https://nodejs.org/
 
 ### Install
 
-From the root directory, run: 
-    `npm install`
-Install the devDependencies:
-    `npm i -D nodemon concurrently`
-cd into /client and run: `npm install`
-
+- From the root directory, run: `npm install`
+- Install the devDependencies: `npm i -D nodemon concurrently`
+- cd into /client and run: `npm install`
 
 ### Resources Used
 - <a href="https://www.udemy.com/modern-react-front-to-back/" target="_blank">Udemy - React Front To Back 2019 by  Brad Traversy</a>
