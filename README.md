@@ -33,6 +33,17 @@ Twitter Showcase is a single page application (SPA) that allows the user to sear
 - Once a bearer token is acquired, create a .env file in the root directory of twitter-showcase.
 - Add the line: TWITTER_TOKEN="`<bearer token>`" (replacing `<bearer token>` with the your own.)
 
+You need to have node/npm installed on your machine to run the app locally. To install node, go to https://nodejs.org/
+
+### Install
+
+From the root directory, run: 
+    `npm install`
+Install the devDependencies:
+    `npm i -D nodemon concurrently`
+cd into /client and run: `npm install`
+
+
 ### Resources Used
 - <a href="https://www.udemy.com/modern-react-front-to-back/" target="_blank">Udemy - React Front To Back 2019 by  Brad Traversy</a>
 - <a href="https://scrimba.com/g/glearnreact" target="_blank">Scrimba - Learn React for free</a>
