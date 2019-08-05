@@ -2,6 +2,7 @@
 
 _A website to showcase Tweets using React and Node._
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 View live on Heroku <a href="https://twitter-showcase.herokuapp.com/" target="_blank">HERE</a>.
 
 <img src="./readme-images/screenshot.png" width="600">
