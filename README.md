@@ -19,7 +19,6 @@ Twitter Showcase is a single page application (SPA) that allows the user to sear
 
 ### Prerequisites
 
-To install and run Twitter Showcase locally, you will need to sign up for a [Twitter developer account](https://developer.twitter.com) and obtain a [bearer token](https://developer.twitter.com/en/docs/basics/authentication/guides/bearer-tokens).
-
-Once a bearer token is acquired, create a .env file in the root directory of twitter-showcase.
-Add the line: TWITTER_TOKEN="`<bearer token>`" (replacing `<bearer token>` with the your own.)
+- To install and run Twitter Showcase locally, you will need to sign up for a [Twitter developer account](https://developer.twitter.com) and obtain a [bearer token](https://developer.twitter.com/en/docs/basics/authentication/guides/bearer-tokens).
+- Once a bearer token is acquired, create a .env file in the root directory of twitter-showcase.
+- Add the line: TWITTER_TOKEN="`<bearer token>`" (replacing `<bearer token>` with the your own.)
