@@ -23,7 +23,7 @@ Twitter Showcase is a single page application (SPA) that allows the user to sear
 - Once a bearer token is acquired, create a .env file in the root directory of twitter-showcase.
 - Add the line: TWITTER_TOKEN="`<bearer token>`" (replacing `<bearer token>` with the your own.)
 
-## Technical
+### Technical
 - Front End (JavaScript)
   - React (main SPA)
   - Axios (HTTP requests)
@@ -32,3 +32,9 @@ Twitter Showcase is a single page application (SPA) that allows the user to sear
   - Axios (HTTP requests)
 - Hosts
   - Heroku
+
+### Resources Used
+- <a href="https://www.udemy.com/modern-react-front-to-back/" target="_blank">Udemy - React Front To Back 2019 by  Brad Traversy</a>
+- <a href="https://scrimba.com/g/glearnreact" target="_blank">Scrimba - Learn React for free</a>
+- <a href="https://developer.twitter.com/en/docs.html" target="_blank">Twitter API Documentation</a>
+- <a href="https://www.npmjs.com/package/axios" target="_blank">Axios project page</a>
