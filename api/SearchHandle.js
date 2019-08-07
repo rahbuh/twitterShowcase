@@ -10,7 +10,7 @@ const searchHandle = (text, tweetCount)=> {
   const searchParams = `?screen_name=${screen_name}&count=${count}`;
 
   const URL = baseURL + searchParams;
-  const AuthStr = "Bearer ".concat(USER_TOKEN);
+  const AuthStr = `Bearer ${USER_TOKEN}`;
 
   return axios
     .get(URL, { headers: { Authorization: AuthStr } })

@@ -12,7 +12,7 @@ const searchTopic = text => {
   const searchParams = `?q=${query}&lang=${lang}&result_type=${type}&count=${count}`;
 
   const URL = baseURL + searchParams;
-  const AuthStr = "Bearer ".concat(USER_TOKEN);
+  const AuthStr = `Bearer ${USER_TOKEN}`;
 
   return axios
     .get(URL, { headers: { Authorization: AuthStr } })
