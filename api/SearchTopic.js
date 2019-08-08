@@ -1,6 +1,6 @@
 require("dotenv").config();
 const axios = require("axios");
-const parseData = require("../client/src/parseData");
+const parseData = require("./parseData");
 
 const searchTopic = text => {
   const count = 10;
