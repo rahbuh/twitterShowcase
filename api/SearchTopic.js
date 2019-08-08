@@ -1,5 +1,6 @@
 require("dotenv").config();
 const axios = require("axios");
+const parseData = require("../client/src/parseData");
 
 const searchTopic = text => {
   const count = 10;
@@ -17,7 +18,7 @@ const searchTopic = text => {
   return axios
     .get(URL, { headers: { Authorization: AuthStr } })
     .then(response => {
-      return response.data.statuses;
+      return parseData(response.data.statuses);
     })
     .catch(error => {
       console.log("error " + error);

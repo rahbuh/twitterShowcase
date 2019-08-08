@@ -6,8 +6,7 @@ const Tweets = ({ tweet }) => {
     return null;
   }
   
-  const {created_at, text, retweet_count, favorite_count } = tweet;
-  const {name, screen_name, profile_image_url_https } = tweet.user
+  const {created_at, name, screen_name, profile_image_url_https, text, retweet_count, favorite_count } = tweet;
 
   return (
     <li className="tweet">

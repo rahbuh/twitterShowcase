@@ -1,7 +1,8 @@
 require("dotenv").config();
 const axios = require("axios");
+const parseData = require("../client/src/parseData");
 
-const searchHandle = (text, tweetCount)=> {
+const searchHandle = (text, tweetCount) => {
   const count = tweetCount;
   let screen_name = text;
 
@@ -15,7 +16,7 @@ const searchHandle = (text, tweetCount)=> {
   return axios
     .get(URL, { headers: { Authorization: AuthStr } })
     .then(response => {
-      return response.data;
+      return parseData(response.data);
     })
     .catch(error => {
       console.log("error " + error);
