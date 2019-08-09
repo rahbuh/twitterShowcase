@@ -2,16 +2,11 @@ require("dotenv").config();
 const axios = require("axios");
 const parseData = require("./parseData");
 
-const searchHandle = (text, tweetCount) => {
-  const count = tweetCount;
-  let screen_name = text;
-
-  const USER_TOKEN = process.env.TWITTER_TOKEN;
+const searchHandle = (screen_name, tweetCount, token) => {
   const baseURL = "https://api.twitter.com/1.1/statuses/user_timeline.json";
-  const searchParams = `?screen_name=${screen_name}&count=${count}`;
-
+  const searchParams = `?screen_name=${screen_name}&count=${tweetCount}`;
   const URL = baseURL + searchParams;
-  const AuthStr = `Bearer ${USER_TOKEN}`;
+  const AuthStr = `Bearer ${token}`;
 
   return axios
     .get(URL, { headers: { Authorization: AuthStr } })

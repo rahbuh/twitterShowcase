@@ -2,18 +2,15 @@ require("dotenv").config();
 const axios = require("axios");
 const parseData = require("./parseData");
 
-const searchTopic = text => {
+const searchTopic = (query, token) => {
   const count = 10;
   const type = "recent";
   const lang = "en";
-  let query = text;
-
-  const USER_TOKEN = process.env.TWITTER_TOKEN;
+  
   const baseURL = "https://api.twitter.com/1.1/search/tweets.json";
   const searchParams = `?q=${query}&lang=${lang}&result_type=${type}&count=${count}`;
-
   const URL = baseURL + searchParams;
-  const AuthStr = `Bearer ${USER_TOKEN}`;
+  const AuthStr = `Bearer ${token}`;
 
   return axios
     .get(URL, { headers: { Authorization: AuthStr } })

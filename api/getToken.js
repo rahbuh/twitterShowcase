@@ -1,29 +1,28 @@
 const axios = require("axios");
-const encode = require("./encode");
 
 const getToken = () => {
-  const API_KEY = "DPw142XkEtuLhB7pmvkkPGbJy";  // will be changed to env var later
-  const API_SECRET = "wqNckqCVeSjmVLueQxLwodUlQqUtBHl3ZaOnDEnFKNPI9SLw0g"; // will be changed to env var later
-  const encodedKey = encode(API_KEY + ":" + API_SECRET);
+  const KEY = process.env.TWITTER_API_KEY;
+  const SECRET = process.env.TWITTER_API_SECRET;
+  const ENCODED_KEY = new Buffer.from(KEY + ":" + SECRET).toString("base64");
 
-  const AuthStr = `Basic ${encodedKey}`;
-  console.log(AuthStr);
-
+  const AuthStr = `Basic ${ENCODED_KEY}`;
   const URL = "https://api.twitter.com/oauth2/token";
 
-  return axios
-    .post(URL, {
-      headers: {
-        Authorization: AuthStr,
-        'Content-Type': "application/x-www-form-urlencoded;charset=UTF-8"
-      },
-      data: {'grant_type': 'client_credentials'}
-    })
+  return axios({
+    method: "post",
+    url: URL,
+    headers: {
+      Authorization: AuthStr,
+      "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+      Accept: "application/json"
+    },
+    data: "grant_type=client_credentials"
+  })
     .then(response => {
-      return(response);
+      return response.data;
     })
     .catch(error => {
-      console.log("error " + error);
+      console.log('error: ' + error);
     });
 };
 

@@ -7,25 +7,34 @@ const path = require("path");
 
 const app = express();
 
-getToken();
-
 app.get("/api/topic/:text", (req, res) => {
   const text = req.params.text;
-  searchTopic(text).then(data => {
+
+  getToken().then(data => {
+    return searchTopic(text, data.access_token)
+  }).then(data => {
     res.json({ message: "Request received!", data });
   });
 });
 
 app.get("/api/handle/:text", (req, res) => {
   const text = req.params.text;
-  searchHandle(text, 10).then(data => {
+  const count = 10;
+
+  getToken().then(data => {
+    return searchHandle(text, count, data.access_token)
+  }).then(data => {
     res.json({ message: "Request received!", data });
   });
 });
 
 app.get("/api/random/:text", (req, res) => {
   const text = req.params.text;
-  searchHandle(text, 100).then(data => {
+    const count = 100;
+
+  getToken().then(data => {
+    return searchHandle(text, count, data.access_token)
+  }).then(data => {
     res.json({ message: "Request received!", data });
   });
 });
