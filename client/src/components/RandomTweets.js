@@ -37,12 +37,6 @@ class RandomTweets extends Component {
     this.setState({ tweet: this.state.tweets[randomIndex] });
   };
 
-  testFunction = () => {
-    if (!this.state.isLoading) {
-      return <Tweets key={this.state.tweet.id} tweet={this.state.tweet} />;
-    }
-  };
-
   render() {
     const favorites = this.state.users;
 

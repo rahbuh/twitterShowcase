@@ -77,11 +77,11 @@ class SearchTweets extends Component {
         </form>
         <div className="tweet-list">
           <ul>
-            {this.state.tweets
+            {(this.state.tweets && this.state.tweets !== null)
               ? this.state.tweets.map(tweet => (
                   <Tweets key={tweet.id} tweet={tweet} />
                 ))
-              : null}
+              : <li className="tweet">No tweets found</li>}
           </ul>
         </div>
       </div>

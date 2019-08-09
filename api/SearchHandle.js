@@ -11,10 +11,15 @@ const searchHandle = (screen_name, tweetCount, token) => {
   return axios
     .get(URL, { headers: { Authorization: AuthStr } })
     .then(response => {
-      return parseData(response.data);
+      if (response.data.length) {
+        return parseData(response.data);
+      } else {
+        return null;
+      }
     })
     .catch(error => {
-      console.log("error " + error);
+      console.log("Error: " + error.response.statusText);
+      console.log("Status: " + error.response.status);
     });
 };
 
