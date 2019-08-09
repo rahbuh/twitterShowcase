@@ -32,15 +32,15 @@ class SearchTweets extends Component {
 
   topicSearch = text => {
     const url = "/api/topic/" + text;
-    this.api(url);
+    this.getTweets(url);
   };
 
   handleSearch = text => {
     const url = "/api/handle/" + text;
-    this.api(url);
+    this.getTweets(url);
   };
 
-  api = url => {
+  getTweets = url => {
     axios
       .get(url)
       .then(response => {
@@ -77,7 +77,11 @@ class SearchTweets extends Component {
         </form>
         <div className="tweet-list">
           <ul>
-            {this.state.tweets ? this.state.tweets.map(tweet => (<Tweets key={tweet.id} tweet={tweet} />)) : null}
+            {this.state.tweets
+              ? this.state.tweets.map(tweet => (
+                  <Tweets key={tweet.id} tweet={tweet} />
+                ))
+              : null}
           </ul>
         </div>
       </div>

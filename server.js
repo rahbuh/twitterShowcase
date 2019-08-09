@@ -2,9 +2,12 @@ require("dotenv").config();
 const express = require("express");
 const searchTopic = require("./api/SearchTopic");
 const searchHandle = require("./api/SearchHandle");
+const getToken = require("./api/getToken");
 const path = require("path");
 
 const app = express();
+
+getToken();
 
 app.get("/api/topic/:text", (req, res) => {
   const text = req.params.text;
