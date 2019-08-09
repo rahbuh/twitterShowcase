@@ -8,21 +8,21 @@ const getToken = () => {
   const AuthStr = `Basic ${ENCODED_KEY}`;
   const URL = "https://api.twitter.com/oauth2/token";
 
-  return axios({
-    method: "post",
-    url: URL,
+  const config = {
     headers: {
       Authorization: AuthStr,
       "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
       Accept: "application/json"
-    },
-    data: "grant_type=client_credentials"
-  })
+    }
+  };
+
+  return axios
+    .post(URL, "grant_type=client_credentials", config)
     .then(response => {
-      return response.data;
+      return response.data.access_token;
     })
     .catch(error => {
-      console.log('error: ' + error);
+      console.log("error: " + error);
     });
 };
 

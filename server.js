@@ -10,8 +10,8 @@ const app = express();
 app.get("/api/topic/:text", (req, res) => {
   const text = req.params.text;
 
-  getToken().then(data => {
-    return searchTopic(text, data.access_token)
+  getToken().then(token => {
+    return searchTopic(text, token)
   }).then(data => {
     res.json({ message: "Request received!", data });
   });
@@ -21,8 +21,8 @@ app.get("/api/handle/:text", (req, res) => {
   const text = req.params.text;
   const count = 10;
 
-  getToken().then(data => {
-    return searchHandle(text, count, data.access_token)
+  getToken().then(token => {
+    return searchHandle(text, count, token)
   }).then(data => {
     res.json({ message: "Request received!", data });
   });
@@ -32,8 +32,8 @@ app.get("/api/random/:text", (req, res) => {
   const text = req.params.text;
     const count = 100;
 
-  getToken().then(data => {
-    return searchHandle(text, count, data.access_token)
+  getToken().then(token => {
+    return searchHandle(text, count, token)
   }).then(data => {
     res.json({ message: "Request received!", data });
   });
