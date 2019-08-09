@@ -2,8 +2,8 @@ const axios = require("axios");
 const encode = require("./encode");
 
 const getToken = () => {
-  const API_KEY = "DPw142XkEtuLhB7pmvkkPGbJy";
-  const API_SECRET = "wqNckqCVeSjmVLueQxLwodUlQqUtBHl3ZaOnDEnFKNPI9SLw0g";
+  const API_KEY = "DPw142XkEtuLhB7pmvkkPGbJy";  // will be changed to env var later
+  const API_SECRET = "wqNckqCVeSjmVLueQxLwodUlQqUtBHl3ZaOnDEnFKNPI9SLw0g"; // will be changed to env var later
   const encodedKey = encode(API_KEY + ":" + API_SECRET);
 
   const AuthStr = `Basic ${encodedKey}`;
