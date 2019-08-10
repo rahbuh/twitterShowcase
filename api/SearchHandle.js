@@ -20,6 +20,7 @@ const searchHandle = (screen_name, tweetCount, token) => {
     .catch(error => {
       console.log("Error: " + error.response.statusText);
       console.log("Status: " + error.response.status);
+      return null
     });
 };
 

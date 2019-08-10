@@ -24,6 +24,7 @@ const searchTopic = (query, token) => {
     .catch(error => {
       console.log("Error: " + error.response.statusText);
       console.log("Status: " + error.response.status);
+      return null
     });
 };
 

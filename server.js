@@ -1,18 +1,19 @@
 require("dotenv").config();
 const express = require("express");
+const getToken = require("./api/getToken");
 const searchTopic = require("./api/SearchTopic");
 const searchHandle = require("./api/SearchHandle");
-const getToken = require("./api/getToken");
 const path = require("path");
 
 const app = express();
+getToken();
+
+const token =
+  "AAAAAAAAAAAAAAAAAAAAAM5O%2FQAAAAAA4PUqURKvlaYZE123WLpGFsLFIuo%3D8Zee34fRfseVOhCH53BbhlcpPd4jzmXL9Xy34o2dBDngAfmkfu";
 
 app.get("/api/topic/:text", (req, res) => {
   const text = req.params.text;
-
-  getToken().then(token => {
-    return searchTopic(text, token)
-  }).then(data => {
+  searchTopic(text, token).then(data => {
     res.json({ message: "Request received!", data });
   });
 });
@@ -20,21 +21,15 @@ app.get("/api/topic/:text", (req, res) => {
 app.get("/api/handle/:text", (req, res) => {
   const text = req.params.text;
   const count = 10;
-
-  getToken().then(token => {
-    return searchHandle(text, count, token)
-  }).then(data => {
+  searchHandle(text, count, token).then(data => {
     res.json({ message: "Request received!", data });
   });
 });
 
 app.get("/api/random/:text", (req, res) => {
   const text = req.params.text;
-    const count = 100;
-
-  getToken().then(token => {
-    return searchHandle(text, count, token)
-  }).then(data => {
+  const count = 100;
+  searchHandle(text, count, token).then(data => {
     res.json({ message: "Request received!", data });
   });
 });
