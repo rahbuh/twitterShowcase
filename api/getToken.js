@@ -16,9 +16,12 @@ const getToken = () => {
     }
   };
 
+  const data = "grant_type=client_credentials"
+
   return axios
-    .post(URL, "grant_type=client_credentials", config)
+    .post(URL, data, config)
     .then(response => {
+      console.log(response.data.access_token)
       return response.data.access_token;
     })
     .catch(error => {
