@@ -7,6 +7,7 @@ const ENCODED_KEY = new Buffer.from(KEY + ":" + SECRET).toString("base64");
 const AuthStr = `Basic ${ENCODED_KEY}`;
 const URL = "https://api.twitter.com/oauth2/token";
 
+const data = "grant_type=client_credentials"
 const config = {
   headers: {
     Authorization: AuthStr,
@@ -14,8 +15,6 @@ const config = {
     Accept: "application/json"
   }
 };
-
-const data = "grant_type=client_credentials"
 
 const getToken = () => {
   return axios
