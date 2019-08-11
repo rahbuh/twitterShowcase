@@ -16,16 +16,16 @@ const config = {
   }
 };
 
-const getToken = () => {
-  return axios
+const getToken = async () => {
+  const res = await axios
     .post(URL, data, config)
     .then(response => {
-      console.log(response.data.access_token)
       return response.data.access_token;
     })
     .catch(error => {
       console.log("error: " + error);
     });
+  return res;
 };
 
 module.exports = getToken;

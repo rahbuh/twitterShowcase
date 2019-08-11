@@ -6,31 +6,34 @@ const searchHandle = require("./api/SearchHandle");
 const path = require("path");
 
 const app = express();
-getToken();
-
-const token =
-  "AAAAAAAAAAAAAAAAAAAAAM5O%2FQAAAAAA4PUqURKvlaYZE123WLpGFsLFIuo%3D8Zee34fRfseVOhCH53BbhlcpPd4jzmXL9Xy34o2dBDngAfmkfu";
+const result = getToken();
 
 app.get("/api/topic/:text", (req, res) => {
   const text = req.params.text;
-  searchTopic(text, token).then(data => {
-    res.json({ message: "Request received!", data });
+  result.then(token => {
+    searchTopic(text, token).then(data => {
+      res.json({ message: "Request received!", data });
+    });
   });
 });
 
 app.get("/api/handle/:text", (req, res) => {
   const text = req.params.text;
   const count = 10;
-  searchHandle(text, count, token).then(data => {
-    res.json({ message: "Request received!", data });
+  result.then(token => {
+    searchHandle(text, count, token).then(data => {
+      res.json({ message: "Request received!", data });
+    });
   });
 });
 
 app.get("/api/random/:text", (req, res) => {
   const text = req.params.text;
   const count = 100;
-  searchHandle(text, count, token).then(data => {
-    res.json({ message: "Request received!", data });
+  result.then(token => {
+    searchHandle(text, count, token).then(data => {
+      res.json({ message: "Request received!", data });
+    });
   });
 });
 
