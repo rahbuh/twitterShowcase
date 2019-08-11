@@ -6,11 +6,11 @@ const searchHandle = require("./api/SearchHandle");
 const path = require("path");
 
 const app = express();
-const result = getToken();
+const authToken = getToken();
 
 app.get("/api/topic/:text", (req, res) => {
   const text = req.params.text;
-  result.then(token => {
+  authToken.then(token => {
     searchTopic(text, token).then(data => {
       res.json({ message: "Request received!", data });
     });
@@ -20,7 +20,7 @@ app.get("/api/topic/:text", (req, res) => {
 app.get("/api/handle/:text", (req, res) => {
   const text = req.params.text;
   const count = 10;
-  result.then(token => {
+  authToken.then(token => {
     searchHandle(text, count, token).then(data => {
       res.json({ message: "Request received!", data });
     });
@@ -30,7 +30,7 @@ app.get("/api/handle/:text", (req, res) => {
 app.get("/api/random/:text", (req, res) => {
   const text = req.params.text;
   const count = 100;
-  result.then(token => {
+  authToken.then(token => {
     searchHandle(text, count, token).then(data => {
       res.json({ message: "Request received!", data });
     });

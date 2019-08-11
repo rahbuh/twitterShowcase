@@ -17,8 +17,7 @@ const config = {
 };
 
 const getToken = async () => {
-  return await axios
-    .post(URL, data, config)
+  return await axios.post(URL, data, config)
     .then(response => {
       return response.data.access_token;
     })
