@@ -1,23 +1,29 @@
 import React from "react";
 import Octicon, { Heart, Sync } from "@primer/octicons-react";
-const moment = require('moment');
+const moment = require("moment");
 
 const Tweets = ({ tweet }) => {
   if (!Object.keys(tweet).length) {
     return null;
   }
-  
-  const {created_at, name, screen_name, profile_image_url_https, text, retweet_count, favorite_count } = tweet;
-  let createDate = moment(created_at).format('h:mm A - MMM D, YYYY');
+
+  const {
+    created_at,
+    name,
+    screen_name,
+    profile_image_url_https,
+    text,
+    retweet_count,
+    favorite_count
+  } = tweet;
+  let createDate = moment(created_at).format("h:mm A - MMM D, YYYY");
 
   return (
     <li className="tweet">
       <div className="tweet-meta">
         <img src={profile_image_url_https} alt="User profile" />
         <div className="tweet-meta-text">
-          <div>
-            <strong>{name}</strong>&nbsp;@{screen_name}
-          </div>
+          <strong>{name}</strong>&nbsp;@{screen_name}
         </div>
       </div>
       <div className="tweet-text">{text}</div>
