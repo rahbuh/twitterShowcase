@@ -1,5 +1,7 @@
 import React from "react";
 import Octicon, { Heart, Sync } from "@primer/octicons-react";
+import "./css/Tweets.css";
+
 const moment = require("moment");
 
 const Tweets = ({ tweet }) => {
@@ -22,12 +24,13 @@ const Tweets = ({ tweet }) => {
     <li className="tweet">
       <div className="tweet-meta">
         <img src={profile_image_url_https} alt="User profile" />
-        <div className="tweet-meta-text">
-          <strong>{name}</strong>&nbsp;@{screen_name}
+        <div>
+          <p className="full-name">{name}</p>
+          <p className="screen-name">@{screen_name}</p>
         </div>
       </div>
       <div className="tweet-text">{text}</div>
-      <div>{createDate}</div>
+      <div className="tweet-date">{createDate}</div>
       <div className="counts">
         <Octicon icon={Sync} />
         &nbsp;{retweet_count}&nbsp;&nbsp;&nbsp;
