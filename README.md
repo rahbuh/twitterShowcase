@@ -8,7 +8,7 @@ View live on Heroku <a href="https://twitter-showcase.herokuapp.com/" target="_b
 <img src="./readme-images/screenshot.png" width="600">
 
 ## Summary
-Twitter Showcase is a single page application (SPA) that allows the user to search Twitter for tweets by topic or from a specific user. The user can also view a random tweet from several preselected accounts. The primary purpose of this project is to serve as a learning tool to familiarize myself with APIs. In addition, this project has helped me create foundational skills in React and Express.
+Twitter Showcase is a single page application (SPA) that allows the user to search Twitter for tweets by topic or from a specific user. The user can also view a random tweet from several preselected accounts. The primary purpose of this project is to serve as a learning tool to familiarize myself with APIs. In addition, this project has helped me create foundational skills in React and Express. The application uses Twitter's Standard APIs for retrieving tweet data.
 
 <img src="./readme-images/react.svg" width="50">&nbsp;&nbsp;
 <img src="./readme-images/javascript.svg" width="50">&nbsp;&nbsp;
@@ -30,9 +30,12 @@ Twitter Showcase is a single page application (SPA) that allows the user to sear
 
 ### Prerequisites
 
-- To run Twitter Showcase, you need to sign up for a [Twitter developer account](https://developer.twitter.com) and obtain a [bearer token](https://developer.twitter.com/en/docs/basics/authentication/guides/bearer-tokens) in order to communicate with the Twitter API.
-- Once a bearer token is acquired, create an .env file in the root directory of twitter-showcase.
-- In the .env file, add the line: TWITTER_TOKEN="`<bearer token>`" (replacing `<bearer token>` with the your own.)
+- To run Twitter Showcase from your local computer, you need to sign up for a [Twitter developer account](https://developer.twitter.com) 
+- Once logged in to your developer account, select Apps from the dropdown menu next to your name in the upper right-hand corner.
+- Select 'Create an app' button and fill out the requested information. 
+- Once your app has been created, select the 'Details' button and choose the 'Keys and tokens' tab.
+- On the 'Keys and tokens' tab, you will find your Consumer API keys. Copy these keys to their respective variables in the `.env.sample` file.
+- Save and rename `.env.sample` to `.env`
 
 You need to have node/npm installed on your machine to run the app locally. To install node, go to https://nodejs.org/
 
