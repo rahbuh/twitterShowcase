@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@primer/octicons-react": "^9.1.1",
+    "@primer/octicons-react": "^9.5.0",
     "moment": "^2.24.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
